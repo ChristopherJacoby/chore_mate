@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ChoreMateV3</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+    <header class="bg-slate-300">
+      <%= link_to "Chore Index", chores_path %>
+      <%= link_to "User Index", users_path %>
+      <%= link_to "Profile Index", profiles_path %>
+      <%= link_to "Room Index", rooms_path %>
+    </header>
+    <main class="p-12">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </main>
+    <footer class="bg-slate-300">
+      Version 1
+    </footer>
+  </body>
+</html>
